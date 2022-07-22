@@ -30,9 +30,6 @@
   <body id="serenityBody">
     <nav id="serenity-navbar" class="navbar navbar-expand-md navbar-expand-sm fixed-top">
       <div class="container">
-        <video id="background-video" data-autoplay="1" muted="" autoplay="autoplay" playsinline="">
-          <source src="Content/files/Websitevid0001-0150.mp4" type="video/mp4">
-        </video>
         <a class="navbar-brand" href="https://serenitytoken.art/">
           <img src="Content/images/SerenityLogo_r.png" style="height:70px;"/>
           <span class="heading-text">SERENITY</span>
@@ -73,17 +70,47 @@
     <section class="collection">
       <div class="container">
         <div class="row">
-          <div class="col-sm-7 character-left">
+          <div class="col-sm-6 character-left">
             <div class="row">
               <div class="col-12" style="margin-left: -25px;">
                 <img class="character" style="height: 100vh; overflow: hidden;"/>
               </div>
             </div>
           </div>
-          <div class="col-sm-5 mint-info">
-            <!--this is where the mint info will appear-->
+          <div class="col-sm-6" style="display: table;">
+            <div class="row" style="display: table-cell; vertical-align: middle;">
+              <div class="col-12 mint-info">
+                <!--this is where the mint info will appear-->
+                <div class="row">
+                  <div class="col-12 title"></div>
+                  <div class="col-12">
+                    Make sure you are connected to the right network (Ethereum Mainnet) and the correct address.
+                    <br/>
+                    Please note: Once you make the purchase, you cannot undo this action.
+                    <br/><br/><br/>
+                    We have set the gas limit to 180000 for the contract to successfully mint your NFT.
+                    <br/>
+                    We recommend that you don't lower the gas limit.
+                  </div>
+                  <div class="col-12" style="margin-top: 25px;">
+                    1 <span class="collection-name"></span> costs <span class="collection-cost"></span> ETH + Gas Fees
+                  </div>
+                  <div class="col-12" style="margin-top: 25px;">
+                    Total <span class="collection-name"></span> Minted
+                  </div>
+                </div>
+
+                <!-- this is where the mint dApp should go -->
+                <div class="row" style="margin-top: 25px;">
+                  <div class="col-3">
+                    <span class="total-minted">???</span> / <span class="collection-total"></span>
+                  </div>
+                  <div class="col-9"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-7 character-right">
+          <div class="col-sm-6 character-right">
             <div class="row">
               <div class="col-12" style="margin-left: -25px;">
                 <img class="character" style="height: 100vh; overflow: hidden;"/>
