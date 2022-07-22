@@ -15,8 +15,8 @@ $(document).ready(function()
     // reads from mint_config.xml and stores data
     $.ajax({
         type: 'GET',
-        url: './Content/files/mint_config.xml',
-        //url: 'https://yamwaffle.github.io/serenity_mint/Content/files/mint_config.xml',
+        //url: './Content/files/mint_config.xml',
+        url: 'https://yamwaffle.github.io/serenity_mint/Content/files/mint_config.xml',
         dataType: 'xml',    
         success: function(xml) {
             var $collections = $(xml).find("collections");
@@ -31,11 +31,23 @@ $(document).ready(function()
                     $backgrounds = $(this).find("backgrounds"),
                     $characters = $(this).find("characters");
 
+                // sets the name of the collection in the mint area
+                $(".title").text(name);
+                $(".collection-name").text(name);
+
+                // sets the cost of each NFT
+                $(".collection-cost").text(cost);
+
+                // sets the total number of NFTs available
+                $(".collection-total").text(total);
+
                 // sets the layout of the mint info and character
                 if(layout == "right") {
                     $(".character-right").css("display", "none");
+                    $(".mint-info").css("text-align", "right");
                 } else {
                     $(".character-left").css("display", "none");
+                    $(".mint-info").css("text-align", "left");
                 }
 
 
@@ -50,13 +62,12 @@ $(document).ready(function()
                             var startTime = parseInt($(this).find('starttime').text()),
                             endTime = parseInt($(this).find('endtime').text()),
                             fileName = $(this).find('filename').text();
-    
-                            if (endTime < startTime) {
-                                endTime = endTime + 24;
-                            }
+
+                            var startTime24 = endTime < startTime ? startTime - 24 : startTime;
+                            var endTime24 = endTime < startTime ? endTime + 24 : endTime;
     
                             // updates background according to user system time of day
-                            if (currentHour >= startTime && currentHour < endTime) {
+                            if ((currentHour >= startTime && currentHour < endTime24) || (currentHour >= startTime24 && currentHour < endTime)) {
                                 setBackground("url('./Content/images/" + folderName + "/" + fileName + "')");
                             }
                         });
