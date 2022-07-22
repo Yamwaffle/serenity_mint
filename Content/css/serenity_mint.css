@@ -54,14 +54,16 @@ body {
 .nav-link {
   font-family: "Bai Jamjuree";
 }
-#collection {
+.collection {
   background-color: black;
   height: 100vh;
   color: white;
 }
-#collection .title {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 75px;
+.mint-info {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  border-radius: 15px;
+  height: 75vh;
 }
 @keyframes fading-in {
   from {
@@ -75,27 +77,31 @@ body {
   #serenity-navbar video {
     display: none;
   }
-  #collection {
+  .collection {
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 115px;
     background-size: 400%;
     padding-bottom: 80px;
   }
-  #collection .navbar-brand span {
+  .collection .navbar-brand span {
     margin-left: 10px;
   }
 }
 @media only screen and (min-width: 897px) {
-  #collection {
+  .collection {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 115px;
     background-size: 100%;
-    padding-bottom: 100px;
+    display: flex;
   }
-  #collection .navbar-brand span {
+  .collection .navbar-brand span {
     margin-left: 15px;
+  }
+  .container {
+    height: 100%;
+    overflow: hidden;
   }
 }
