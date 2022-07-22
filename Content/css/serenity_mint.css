@@ -1,0 +1,101 @@
+html {
+  font-family: "Open Sans";
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  font: "Open Sans";
+}
+#background-video {
+  width: 100%;
+  height: 96px;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.navbar {
+  background: black;
+}
+.navbar-nav {
+  align-items: right;
+  text-align: center;
+}
+.nav-link,
+.navbar-brand {
+  cursor: pointer;
+}
+.nav-link {
+  margin-right: 1em !important;
+  color: #9B9B9B !important;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: #ef7daf !important;
+  transition-duration: 0.2s;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+.navbar-brand span {
+  color: #9B9B9B;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+}
+.navbar-brand span:hover {
+  color: #9B9B9B;
+  text-decoration: none;
+}
+.heading-text,
+.nav-link {
+  font-family: "Bai Jamjuree";
+}
+#collection {
+  background-color: black;
+  height: 100vh;
+  color: white;
+}
+#collection .title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 75px;
+}
+@keyframes fading-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 896px) {
+  #serenity-navbar video {
+    display: none;
+  }
+  #collection {
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 115px;
+    background-size: 400%;
+    padding-bottom: 80px;
+  }
+  #collection .navbar-brand span {
+    margin-left: 10px;
+  }
+}
+@media only screen and (min-width: 897px) {
+  #collection {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 115px;
+    background-size: 100%;
+    padding-bottom: 100px;
+  }
+  #collection .navbar-brand span {
+    margin-left: 15px;
+  }
+}
