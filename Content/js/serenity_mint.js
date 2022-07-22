@@ -17,7 +17,7 @@ $(document).ready(function()
     //var xmlDoc = $.parseXML("../files/mint_config.xml");
     $.ajax({
         type: 'GET',
-        url: '../files/mint_config.xml',
+        url: './Content/files/mint_config.xml',
         dataType: 'xml',    
         success: function(xml) {
             var $collections = $(xml).find("collections");
