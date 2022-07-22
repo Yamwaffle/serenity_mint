@@ -13,11 +13,10 @@ $(document).ready(function()
     });
 
     // reads from mint_config.xml and stores data
-    //var xmlDoc = $.parseXML("<collections> <collection> <name>mūz alias: the dream girl</name> <cost>0.06</cost>  <total>1000</total>  <layout>right</layout>  <foldername>dream_girl</foldername> <backgrounds>   <background> <filename>background_1.jpg</filename> <starttime>5</starttime>  <endtime>13</endtime>  </background> <background> <filename>background_2.jpg</filename> <starttime>13</starttime> <endtime>21</endtime> </background> <background> <filename>background_3.jpg</filename> <starttime>21</starttime> <endtime>5</endtime> </background> </backgrounds> <characters>   <character> <filename>dream_1.png</filename> </character> <character> <filename>dream_2.png</filename> </character> <character> <filename>dream_3.png</filename> </character> <character> <filename>dream_4.png</filename> </character> </characters> </collection> </collections>");
-    //var xmlDoc = $.parseXML("../files/mint_config.xml");
     $.ajax({
         type: 'GET',
         url: './Content/files/mint_config.xml',
+        //url: 'https://yamwaffle.github.io/serenity_mint/Content/files/mint_config.xml',
         dataType: 'xml',    
         success: function(xml) {
             var $collections = $(xml).find("collections");
@@ -32,31 +31,40 @@ $(document).ready(function()
                     $backgrounds = $(this).find("backgrounds"),
                     $characters = $(this).find("characters");
 
+                // sets the layout of the mint info and character
+                if(layout == "right") {
+                    $(".character-right").css("display", "none");
+                } else {
+                    $(".character-left").css("display", "none");
+                }
+
 
                 // sets the background according to user's system time
                 $backgrounds.each(function(){
+                    var numberOfBackgrounds = $(this).children("background").length;
 
-                    var $background = $(this).find('background');
+                    if (numberOfBackgrounds > 1) {
+                        var $background = $(this).find('background');
 
-                    $background.each(function(){
-                        var startTime = parseInt($(this).find('starttime').text()),
-                        endTime = parseInt($(this).find('endtime').text()),
-                        fileName = $(this).find('filename').text();
-
-                        // checks if there's no start or end time (which means only 1 background)
-                        if(isNaN(startTime)) {
-                            setBackground("url('./Content/images/" + folderName + "/" + fileName + "')");
-                        }
-
-                        if (endTime < startTime) {
-                            endTime = endTime + 24;
-                        }
-
-                        // updates background according to user system time of day
-                        if (currentHour >= startTime && currentHour < endTime) {
-                            setBackground("url('./Content/images/" + folderName + "/" + fileName + "')");
-                        }
-                    });
+                        $background.each(function(){
+                            var startTime = parseInt($(this).find('starttime').text()),
+                            endTime = parseInt($(this).find('endtime').text()),
+                            fileName = $(this).find('filename').text();
+    
+                            if (endTime < startTime) {
+                                endTime = endTime + 24;
+                            }
+    
+                            // updates background according to user system time of day
+                            if (currentHour >= startTime && currentHour < endTime) {
+                                setBackground("url('./Content/images/" + folderName + "/" + fileName + "')");
+                            }
+                        });
+                    } else {
+                        // just set the one background
+                        var fileName = $(this).find('filename').text();
+                        setBackground("url('./Content/images/" + folderName + "/" + fileName + "')");
+                    }
                 });
 
                 
@@ -96,10 +104,10 @@ $(document).ready(function()
 
 
 function setBackground(filename){
-    $("#collection").css("background-image",filename);
+    $(".collection").css("background-image",filename);
 }
 
 
 function setCharacter(filename){
-    $("#character").attr("src", filename);
+    $(".character").attr("src", filename);
 }
