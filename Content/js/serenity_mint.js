@@ -13,7 +13,8 @@ $(document).ready(function()
     });
 
     // reads from mint_config.xml and stores data
-    var xmlDoc = $.parseXML("<collections> <collection> <name>mūz alias: the dream girl</name> <cost>0.06</cost>  <total>1000</total>  <layout>right</layout>  <foldername>dream_girl</foldername> <backgrounds>   <background> <filename>background_1.jpg</filename> <starttime>5</starttime>  <endtime>13</endtime>  </background> <background> <filename>background_2.jpg</filename> <starttime>13</starttime> <endtime>21</endtime> </background> <background> <filename>background_3.jpg</filename> <starttime>21</starttime> <endtime>5</endtime> </background> </backgrounds> <characters>   <character> <filename>dream_1.png</filename> </character> <character> <filename>dream_2.png</filename> </character> <character> <filename>dream_3.png</filename> </character> <character> <filename>dream_4.png</filename> </character> </characters> </collection> </collections>");
+    //var xmlDoc = $.parseXML("<collections> <collection> <name>mūz alias: the dream girl</name> <cost>0.06</cost>  <total>1000</total>  <layout>right</layout>  <foldername>dream_girl</foldername> <backgrounds>   <background> <filename>background_1.jpg</filename> <starttime>5</starttime>  <endtime>13</endtime>  </background> <background> <filename>background_2.jpg</filename> <starttime>13</starttime> <endtime>21</endtime> </background> <background> <filename>background_3.jpg</filename> <starttime>21</starttime> <endtime>5</endtime> </background> </backgrounds> <characters>   <character> <filename>dream_1.png</filename> </character> <character> <filename>dream_2.png</filename> </character> <character> <filename>dream_3.png</filename> </character> <character> <filename>dream_4.png</filename> </character> </characters> </collection> </collections>");
+    var xmlDoc = $.parseXML("../files/mint_config.xml");
     var $xml = $(xmlDoc);
 
     var $collections = $xml.find("collections");
