@@ -105,10 +105,10 @@ body {
 @media only screen and (max-width: 896px) {
   .collection {
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     padding-top: 115px;
     background-size: 400%;
-    height: 100vh;
   }
   .collection .navbar-brand span {
     margin-left: 10px;
