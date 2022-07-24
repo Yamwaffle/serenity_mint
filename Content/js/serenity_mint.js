@@ -126,7 +126,7 @@ $(document).ready(function()
 
 
 function setBackground(filename){
-    $("body").css("background-image",filename);
+    $("html").css("background-image",filename);
 }
 
 
