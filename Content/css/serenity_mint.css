@@ -5,6 +5,7 @@ html {
   overflow-x: hidden;
 }
 body {
+  background-color: black;
   overflow-x: hidden;
   font: "Open Sans";
 }
@@ -46,8 +47,6 @@ body {
   font-family: "Bai Jamjuree";
 }
 .collection {
-  background-color: black;
-  height: 100vh;
   color: white;
 }
 .mint-info {
@@ -103,13 +102,14 @@ body {
   text-align: left;
 }
 @media only screen and (max-width: 896px) {
-  .collection {
+  body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .collection {
     padding-top: 115px;
-    background-size: 400%;
-    height: auto;
   }
   .collection .navbar-brand span {
     margin-left: 10px;
