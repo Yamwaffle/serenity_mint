@@ -71,6 +71,34 @@ body {
   font-size: 3em;
   margin-bottom: 15px;
 }
+.collection .mint-progress-border {
+  border: 1px #FFFFFF;
+}
+.round-button {
+  height: 32px;
+  width: 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#mint-amount {
+  text-align: center;
+  font-size: 1.25em;
+  width: 100%;
+}
+#mint-button {
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.5em;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-left {
+  text-align: left;
+}
 @media only screen and (max-width: 896px) {
   .collection {
     background-position: center;
@@ -83,14 +111,28 @@ body {
     margin-left: 10px;
   }
   .character {
-    width: 200%;
+    width: 150%;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
     margin-top: -100px;
     position: fixed;
-    left: -200px;
+    left: -80px;
     bottom: 0px;
+    z-index: 10;
+  }
+  .mint-info {
+    background-color: rgba(0, 0, 0, 0.65) !important;
+    position: relative;
+    margin-top: 0px;
+    z-index: 100;
+  }
+  .mint-info .title {
+    font-size: 2.5em !important;
+  }
+  .text-align-right,
+  .text-align-left {
+    text-align: center !important;
   }
 }
 @media only screen and (min-width: 897px) {
