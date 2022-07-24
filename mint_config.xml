@@ -1,0 +1,48 @@
+<collections>
+    <collection>
+        <name>mūz alias: the dream girl</name>
+        <cost>0.06</cost> <!-- cost in ETH -->
+        <total>1000</total> <!-- total supply of NFTs for this collection -->
+        <layout>right</layout> <!-- position of the mint info -->
+        <foldername>dream_girl</foldername>
+        <buttoncolor>#F2AF0D</buttoncolor> <!-- color of the mint button -->
+        <buttontextcolor>#FFFFFF</buttontextcolor> <!-- color of the word MINT on the mint button -->
+        <gradientlight>#FFFA00</gradientlight> <!-- light color of the mint progress bar -->
+        <gradientdark>#D37300</gradientdark> <!-- dark color of the mint progress bar -->
+        <backgrounds>
+            <!-- if multiple backgrounds, just need to copy and paste the next section -->
+            <!-- background will be based on start and end times in 24 hr format according to the user's machine -->
+            <background>
+                <filename>background_1.jpg</filename>
+                <starttime>5</starttime> <!-- leave blank if background doens't change | use 0-23 | eg. if 8 then background will start at 8:00:00 -->
+                <endtime>13</endtime> <!-- leave blank if background doens't change | use 0-23 | eg. if 22 then background will stay until 21:59:59 -->
+            </background>
+            <background>
+                <filename>background_2.jpg</filename>
+                <starttime>13</starttime>
+                <endtime>21</endtime>
+            </background>
+            <background>
+                <filename>background_3.jpg</filename>
+                <starttime>21</starttime>
+                <endtime>5</endtime>
+            </background>
+        </backgrounds>
+        <characters>
+            <!-- if multiple characters, just need to copy and paste the next section -->
+            <!-- characters will be randomized if there are more than 1 -->
+            <character>
+                <filename>dream_1.png</filename>
+            </character>
+            <character>
+                <filename>dream_2.png</filename>
+            </character>
+            <character>
+                <filename>dream_3.png</filename>
+            </character>
+            <character>
+                <filename>dream_4.png</filename>
+            </character>
+        </characters>
+    </collection>
+</collections>
