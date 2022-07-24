@@ -98,14 +98,15 @@ html {
   text-align: left;
 }
 @media only screen and (max-width: 896px) {
-  html {
+  body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
   }
 
   .collection {
-    padding-top: 115px;
+    padding-top: 5px;
   }
   .collection .navbar-brand span {
     margin-left: 10px;
