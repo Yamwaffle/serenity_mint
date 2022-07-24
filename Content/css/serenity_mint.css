@@ -107,6 +107,7 @@ body {
     background-size: 400%;
     padding-bottom: 80px;
     overflow: hidden;
+    height: auto;
   }
   .collection .navbar-brand span {
     margin-left: 10px;
