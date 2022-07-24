@@ -3,6 +3,11 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: black;
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 .navbar {
@@ -102,7 +107,6 @@ html {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
   }
 
   .collection {
