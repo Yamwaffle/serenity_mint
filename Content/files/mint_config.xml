@@ -5,9 +5,10 @@
         <total>1000</total> <!-- total supply of NFTs for this collection -->
         <layout>right</layout> <!-- position of the mint info -->
         <foldername>dream_girl</foldername>
-        <buttoncolor>#F2AF0D</buttoncolor>
-        <gradientlight>#FFFA00</gradientlight>
-        <gradientdark>#D37300</gradientdark>
+        <buttoncolor>#F2AF0D</buttoncolor> <!-- color of the mint button -->
+        <buttontextcolor>#FFFFFF</buttontextcolor> <!-- color of the word MINT on the mint button -->
+        <gradientlight>#FFFA00</gradientlight> <!-- light color of the mint progress bar -->
+        <gradientdark>#D37300</gradientdark> <!-- dark color of the mint progress bar -->
         <backgrounds>
             <!-- if multiple backgrounds, just need to copy and paste the next section -->
             <!-- background will be based on start and end times in 24 hr format according to the user's machine -->
