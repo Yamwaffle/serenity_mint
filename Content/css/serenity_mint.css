@@ -1,14 +1,10 @@
 html {
-  font-family: "Open Sans";
   font-size: 16px;
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-body {
   background-color: black;
-  overflow-x: hidden;
-  font: "Open Sans";
 }
+
 .navbar {
   background: black;
 }
@@ -102,11 +98,10 @@ body {
   text-align: left;
 }
 @media only screen and (max-width: 896px) {
-  body {
+  html {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
   }
 
   .collection {
