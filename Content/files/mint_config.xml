@@ -5,6 +5,9 @@
         <total>1000</total> <!-- total supply of NFTs for this collection -->
         <layout>right</layout> <!-- position of the mint info -->
         <foldername>dream_girl</foldername>
+        <buttoncolor>#F2AF0D</buttoncolor>
+        <gradientlight>#FFFA00</gradientlight>
+        <gradientdark>#D37300</gradientdark>
         <backgrounds>
             <!-- if multiple backgrounds, just need to copy and paste the next section -->
             <!-- background will be based on start and end times in 24 hr format according to the user's machine -->
