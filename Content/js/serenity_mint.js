@@ -15,8 +15,8 @@ $(document).ready(function()
     // reads from mint_config.xml and stores data
     $.ajax({
         type: 'GET',
-        url: './Content/files/mint_config.xml',
-        //url: 'https://yamwaffle.github.io/serenity_mint/Content/files/mint_config.xml',
+        //url: './Content/files/mint_config.xml',
+        url: 'https://yamwaffle.github.io/serenity_mint/Content/files/mint_config.xml',
         dataType: 'xml',    
         success: function(xml) {
             var $collections = $(xml).find("collections");
@@ -28,6 +28,10 @@ $(document).ready(function()
                     total = $(this).find('total').text(),
                     layout = $(this).find('layout').text(),
                     folderName = $(this).find('foldername').text(),
+                    buttonColor = $(this).find('buttoncolor').text(),
+                    buttonTextColor = $(this).find('buttontextcolor').text(),
+                    gradientLightColor = $(this).find('gradientlight').text(),
+                    gradientDarkColor = $(this).find('gradientdark').text(),
                     $backgrounds = $(this).find("backgrounds"),
                     $characters = $(this).find("characters");
 
@@ -44,12 +48,20 @@ $(document).ready(function()
                 // sets the layout of the mint info and character
                 if(layout == "right") {
                     $(".character-right").css("display", "none");
-                    $(".mint-info").css("text-align", "right");
+                    $(".mint-info").addClass("text-align-right");
                 } else {
                     $(".character-left").css("display", "none");
-                    $(".mint-info").css("text-align", "left");
+                    $(".mint-info").addClass("text-align-left");
                 }
 
+                // sets the gradient colors of the mint progress bar
+                $(".mint-progress-bar").css("background-image", "linear-gradient(to right, " + gradientLightColor + ", " + gradientDarkColor + ")");
+
+                // sets the color for the minting buttons
+                $(".round-button").css("background-color", buttonColor);
+                $(".round-button").css("color", buttonTextColor);
+                $("#mint-button").css("background-color", buttonColor);
+                $("#mint-button").css("color", buttonTextColor);
 
                 // sets the background according to user's system time
                 $backgrounds.each(function(){
