@@ -3,7 +3,7 @@
         <name>mūz alias: the dream girl</name>
         <cost>0.06</cost> <!-- cost in ETH -->
         <total>1000</total> <!-- total supply of NFTs for this collection -->
-        <layout>right</layout> <!-- position of the mint info -->
+        <layout>left</layout> <!-- position of the mint info -->
         <foldername>dream_girl</foldername>
         <buttoncolor>#F2AF0D</buttoncolor> <!-- color of the mint button -->
         <buttontextcolor>#FFFFFF</buttontextcolor> <!-- color of the word MINT on the mint button -->
