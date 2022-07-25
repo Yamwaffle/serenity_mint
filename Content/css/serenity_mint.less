@@ -11,21 +11,23 @@
 @lightbrown: #8C6911;
 
 @fontbai: "Bai Jamjuree";
-@fontopen: "Open Sans";
 
 @mobileheader: 0px;
 
-
 html {
-    font-family: @fontopen;
     font-size: 16px;
     scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    background-color: black;
+    height: 100%;
 }
 
 body {
-  overflow-x: hidden;
-  font: @fontopen;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 .navbar {
@@ -69,8 +71,6 @@ body {
 }
 
 .collection {
-    background-color: black;
-    height: 100vh;
     color: white;
 }
 
@@ -107,8 +107,6 @@ body {
     border-radius: 50px;
     font-size: 1.5em;
     font-weight: bold;
-    text-align: center;
-    vertical-align: middle;
     padding-top: 2px;
 }
 
@@ -137,13 +135,7 @@ body {
 @media only screen and (max-width: 896px) {
 
     .collection {
-        background-position: center;
-        background-repeat: no-repeat;
-
         padding-top: 115px;
-        background-size: 400%;
-
-        height: auto;
 
         .navbar-brand span {
             margin-left: 10px;
@@ -182,13 +174,6 @@ body {
 @media only screen and (min-width: 897px) {
 
     .collection {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        
-        padding-top: 115px;
-        background-size: 100%;
-
         display: flex;
 
         .navbar-brand span {
@@ -204,6 +189,10 @@ body {
     .character {
         height: 100vh;
         overflow: hidden;
+    }
+
+    .mint-info {
+        margin-top: 115px;
     }
 
 }
