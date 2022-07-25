@@ -84,6 +84,8 @@ body {
   font-size: 1.5em;
   font-weight: bold;
   padding-top: 2px;
+  text-align: center;
+  vertical-align: middle;
 }
 #mint-amount {
   text-align: center;
