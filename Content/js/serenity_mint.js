@@ -15,7 +15,8 @@ $(document).ready(function()
     // reads from mint_config.xml and stores data
     $.ajax({
         type: 'GET',
-        url: './Content/files/mint_config.xml',
+        //url: './Content/files/mint_config.xml',
+        url: 'https://yamwaffle.github.io/serenity_mint/Content/files/mint_config.xml',
         dataType: 'xml',    
         success: function(xml) {
             var $collections = $(xml).find("collections");
@@ -46,10 +47,11 @@ $(document).ready(function()
 
                 // sets the layout of the mint info and character
                 if(layout == "right") {
-                    $(".character-right").css("display", "none");
+                    $(".character-pos").addClass("order-sm-1");
                     $(".mint-info").addClass("text-align-right");
+                    $(".mint-offset").addClass("offset-md-6");
                 } else {
-                    $(".character-left").css("display", "none");
+                    $(".character-pos").addClass("order-sm-5");
                     $(".mint-info").addClass("text-align-left");
                 }
 
