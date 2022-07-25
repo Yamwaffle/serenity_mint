@@ -31,6 +31,7 @@ $(document).ready(function()
                     buttonTextColor = $(this).find('buttontextcolor').text(),
                     gradientLightColor = $(this).find('gradientlight').text(),
                     gradientDarkColor = $(this).find('gradientdark').text(),
+                    characterFadeIn = $(this).find('characterfadein').text() === 'true';
                     $backgrounds = $(this).find("backgrounds"),
                     $characters = $(this).find("characters");
 
@@ -115,6 +116,11 @@ $(document).ready(function()
                         // just set the one character
                         var fileName = $(this).find('filename').text();
                         setCharacter("./Content/images/" + folderName + "/" + fileName);
+                    }
+
+                    // addes fade in based on config
+                    if (characterFadeIn) {
+                        $(".character").addClass("active");
                     }
                 });
             });
