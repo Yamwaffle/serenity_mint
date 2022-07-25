@@ -15,8 +15,7 @@ $(document).ready(function()
     // reads from mint_config.xml and stores data
     $.ajax({
         type: 'GET',
-        //url: './Content/files/mint_config.xml',
-        url: 'https://yamwaffle.github.io/serenity_mint/Content/files/mint_config.xml',
+        url: './Content/files/mint_config.xml',
         dataType: 'xml',    
         success: function(xml) {
             var $collections = $(xml).find("collections");
